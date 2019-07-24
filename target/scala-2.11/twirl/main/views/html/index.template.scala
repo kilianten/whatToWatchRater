@@ -50,7 +50,7 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 24 10:38:31 IST 2019
+                  DATE: Wed Jul 24 15:08:27 IST 2019
                   SOURCE: /home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/index.scala.html
                   HASH: 5fbf49a884262d39c8a3b9735f300bf182281d20
                   MATRIX: 941->1|1037->4|1064->6|1091->25|1130->27|1159->30|1215->57

@@ -4,7 +4,7 @@
 		module="whattowatch_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20190724103734"
+		publication="20190724150725"
 	>
 		<description>
 		whattowatch
@@ -45,18 +45,18 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.11" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.11" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-enhancer" rev="1.2.2" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.4.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.4.0-RC4" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-ebean_2.11" rev="5.0.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-server_2.11" rev="2.7.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.7.0" conf="test->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-omnidoc_2.11" rev="2.7.0" conf="docs->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.7.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-akka-http-server_2.11" rev="2.7.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-java-forms_2.11" rev="2.7.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="filters-helpers_2.11" rev="2.7.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-guice_2.11" rev="2.7.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-server_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.7.0-RC9" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-omnidoc_2.11" rev="2.7.0-RC9" conf="docs->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-akka-http-server_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-forms_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="filters-helpers_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-guice_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
 		<dependency org="com.h2database" name="h2" rev="1.4.192" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-jdbc-evolutions_2.11" rev="2.7.0" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-jdbc_2.11" rev="2.7.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-jdbc-evolutions_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-jdbc_2.11" rev="2.7.0-RC9" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

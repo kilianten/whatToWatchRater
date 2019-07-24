@@ -14,7 +14,7 @@ create table movie_rating (
   id                            bigint auto_increment not null,
   num_of_ratings                bigint,
   total                         bigint,
-  ratings                       double not null,
+  rating                        double not null,
   constraint pk_movie_rating primary key (id)
 );
 

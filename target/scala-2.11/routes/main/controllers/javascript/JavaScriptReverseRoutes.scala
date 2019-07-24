@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Wed Jul 24 10:38:30 IST 2019
+// @DATE:Wed Jul 24 15:08:26 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 

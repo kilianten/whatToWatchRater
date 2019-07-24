@@ -21,8 +21,6 @@ public class MovieRating extends Model {
 
     private Long total;
 
-    private double ratings;
-
-
+    private double rating;
 
 }
