@@ -3,9 +3,16 @@
 
 # --- !Ups
 
+create table director (
+  id                            bigint auto_increment not null,
+  fname                         varchar(255),
+  lname                         varchar(255),
+  constraint pk_director primary key (id)
+);
+
 create table movie (
   id                            bigint auto_increment not null,
-  name                          varchar(255),
+  title                         varchar(255),
   release_date                  timestamp,
   constraint pk_movie primary key (id)
 );
@@ -20,6 +27,8 @@ create table movie_rating (
 
 
 # --- !Downs
+
+drop table if exists director;
 
 drop table if exists movie;
 

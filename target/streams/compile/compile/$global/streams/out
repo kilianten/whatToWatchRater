@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0m/home/ktennyson/Documents/pacticeFiles/whattowatch/app/models/movie/MovieRating.java:39:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol: variable setNumOfRatings[0m
+[0m[[0m[31merror[0m] [0m[0m        this.setNumOfRatings = setNumOfRatings;[0m
