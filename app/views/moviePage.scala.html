@@ -1,27 +1,21 @@
-@(movies: List[models.movie.Movie])
+@(movie: models.movie.Movie)
 <script src="@routes.Assets.versioned("javascripts/moviePage.js")" type="text/javascript"></script>
 
 @main("Movie") {
     <h1>Welcome to Play!</h1>
 
-    @for(m <- movies){
 
+        @movie.getBackgroundColour
+
+
+        <img onload="changeBackground('@movie.getBackgroundColour')" src="/assets/@movie.getMoviePoster">
         
-        
-        @m.getBackgroundColour
-
-
-        <img onload="changeBackground('@m.getBackgroundColour')" src="/assets/@m.getMoviePoster">
-        /assets/@m.getMoviePoster
-        @for(colour <- m.generateColours(10)){
+        @for(colour <- movie.generateColours(10)){
            
             <div id="div" onClick="changeBackground()"  style="background-color:@colour; width:15em;">
-                    <a href="@routes.HomeController.changeMovieColour(m.getId, colour)"> @colour</a>
+                    <a href="@routes.HomeController.changeMovieColour(movie.getId, colour)"> @colour</a>
             </div>
 
         }
-    }
-
-
 }
   

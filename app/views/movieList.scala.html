@@ -1,0 +1,15 @@
+@(movies: List[models.movie.Movie])
+<script src="@routes.Assets.versioned("javascripts/moviePage.js")" type="text/javascript"></script>
+
+@main("Movie") {
+
+    @for(movie <- movies){
+
+        <a href="@routes.HomeController.moviePage(movie.getId)"> @movie.getTitle <a> 
+
+        <br>
+    }
+
+
+}
+  

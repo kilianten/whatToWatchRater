@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Tue Jul 30 11:09:39 IST 2019
+// @DATE:Tue Jul 30 14:52:00 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -29,22 +29,32 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
-    def moviePage: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.moviePage",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "movie"})
-        }
-      """
-    )
-  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def moviePage: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.moviePage",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "movie/id" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("id", id0)])})
+        }
+      """
+    )
+  
+    // @LINE:8
+    def movieList: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.movieList",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "movieList"})
         }
       """
     )

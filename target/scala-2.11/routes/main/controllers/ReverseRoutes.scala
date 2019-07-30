@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Tue Jul 30 11:09:39 IST 2019
+// @DATE:Tue Jul 30 14:52:00 IST 2019
 
 import play.api.mvc.Call
 
@@ -24,16 +24,22 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "changeMovieColour/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)) + "/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("colour", colour)))
     }
   
-    // @LINE:7
-    def moviePage(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "movie")
-    }
-  
     // @LINE:6
     def index(): Call = {
       
       Call("GET", _prefix)
+    }
+  
+    // @LINE:7
+    def moviePage(id:Long): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "movie/id" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("id", id)))))
+    }
+  
+    // @LINE:8
+    def movieList(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "movieList")
     }
   
   }

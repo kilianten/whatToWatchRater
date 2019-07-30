@@ -22,10 +22,10 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object moviePage extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[List[models.movie.Movie],play.twirl.api.HtmlFormat.Appendable] {
+object moviePage extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.movie.Movie,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(movies: List[models.movie.Movie]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(movie: models.movie.Movie):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
@@ -35,34 +35,28 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
 """),_display_(/*4.2*/main("Movie")/*4.15*/ {_display_(Seq[Any](format.raw/*4.17*/("""
     """),format.raw/*5.5*/("""<h1>Welcome to Play!</h1>
 
-    """),_display_(/*7.6*/for(m <- movies) yield /*7.22*/{_display_(Seq[Any](format.raw/*7.23*/("""
 
+        """),_display_(/*8.10*/movie/*8.15*/.getBackgroundColour),format.raw/*8.35*/("""
+
+
+        """),format.raw/*11.9*/("""<img onload="changeBackground('"""),_display_(/*11.41*/movie/*11.46*/.getBackgroundColour),format.raw/*11.66*/("""')" src="/assets/"""),_display_(/*11.84*/movie/*11.89*/.getMoviePoster),format.raw/*11.104*/("""">
         
-        
-        """),_display_(/*11.10*/m/*11.11*/.getBackgroundColour),format.raw/*11.31*/("""
-
-
-        """),format.raw/*14.9*/("""<img onload="changeBackground('"""),_display_(/*14.41*/m/*14.42*/.getBackgroundColour),format.raw/*14.62*/("""')" src="/assets/"""),_display_(/*14.80*/m/*14.81*/.getMoviePoster),format.raw/*14.96*/("""">
-        /assets/"""),_display_(/*15.18*/m/*15.19*/.getMoviePoster),format.raw/*15.34*/("""
-        """),_display_(/*16.10*/for(colour <- m.generateColours(10)) yield /*16.46*/{_display_(Seq[Any](format.raw/*16.47*/("""
+        """),_display_(/*13.10*/for(colour <- movie.generateColours(10)) yield /*13.50*/{_display_(Seq[Any](format.raw/*13.51*/("""
            
-            """),format.raw/*18.13*/("""<div id="div" onClick="changeBackground()"  style="background-color:"""),_display_(/*18.82*/colour),format.raw/*18.88*/("""; width:15em;">
-                    <a href=""""),_display_(/*19.31*/routes/*19.37*/.HomeController.changeMovieColour(m.getId, colour)),format.raw/*19.87*/(""""> """),_display_(/*19.91*/colour),format.raw/*19.97*/("""</a>
+            """),format.raw/*15.13*/("""<div id="div" onClick="changeBackground()"  style="background-color:"""),_display_(/*15.82*/colour),format.raw/*15.88*/("""; width:15em;">
+                    <a href=""""),_display_(/*16.31*/routes/*16.37*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*16.91*/(""""> """),_display_(/*16.95*/colour),format.raw/*16.101*/("""</a>
             </div>
 
-        """)))}),format.raw/*22.10*/("""
-    """)))}),format.raw/*23.6*/("""
-
-
-""")))}),format.raw/*26.2*/("""
+        """)))}),format.raw/*19.10*/("""
+""")))}),format.raw/*20.2*/("""
   """))
       }
     }
   }
 
-  def render(movies:List[models.movie.Movie]): play.twirl.api.HtmlFormat.Appendable = apply(movies)
+  def render(movie:models.movie.Movie): play.twirl.api.HtmlFormat.Appendable = apply(movie)
 
-  def f:((List[models.movie.Movie]) => play.twirl.api.HtmlFormat.Appendable) = (movies) => apply(movies)
+  def f:((models.movie.Movie) => play.twirl.api.HtmlFormat.Appendable) = (movie) => apply(movie)
 
   def ref: this.type = this
 
@@ -71,11 +65,11 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
 
               /*
                   -- GENERATED --
-                  DATE: Tue Jul 30 13:23:59 IST 2019
+                  DATE: Tue Jul 30 14:44:36 IST 2019
                   SOURCE: /home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/moviePage.scala.html
-                  HASH: 9cb30097da113b0c3380389d7a974d239cf93284
-                  MATRIX: 970->1|1098->36|1138->50|1152->56|1217->101|1279->138|1300->151|1339->153|1370->158|1427->190|1458->206|1496->207|1552->236|1562->237|1603->257|1641->268|1700->300|1710->301|1751->321|1796->339|1806->340|1842->355|1889->375|1899->376|1935->391|1972->401|2024->437|2063->438|2116->463|2212->532|2239->538|2312->584|2327->590|2398->640|2429->644|2456->650|2521->684|2557->690|2591->694
-                  LINES: 28->1|33->2|33->2|33->2|33->2|35->4|35->4|35->4|36->5|38->7|38->7|38->7|42->11|42->11|42->11|45->14|45->14|45->14|45->14|45->14|45->14|45->14|46->15|46->15|46->15|47->16|47->16|47->16|49->18|49->18|49->18|50->19|50->19|50->19|50->19|50->19|53->22|54->23|57->26
+                  HASH: 6cc2d40dfb9cf82245aac22c493ec954272cf341
+                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1266->131|1287->144|1326->146|1357->151|1420->188|1433->193|1473->213|1511->224|1570->256|1584->261|1625->281|1670->299|1684->304|1721->319|1769->340|1825->380|1864->381|1917->406|2013->475|2040->481|2113->527|2128->533|2203->587|2234->591|2262->597|2327->631|2359->633
+                  LINES: 28->1|33->2|33->2|33->2|33->2|35->4|35->4|35->4|36->5|39->8|39->8|39->8|42->11|42->11|42->11|42->11|42->11|42->11|42->11|44->13|44->13|44->13|46->15|46->15|46->15|47->16|47->16|47->16|47->16|47->16|50->19|51->20
                   -- GENERATED --
               */
           

@@ -4,8 +4,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /movie                      controllers.HomeController.moviePage
-
+GET     /movie/id                   controllers.HomeController.moviePage(id:Long)
+GET     /movieList                  controllers.HomeController.movieList
 
 #Moveie Colours
 GET     /changeMovieColour/:id/:colour             controllers.HomeController.changeMovieColour(id:Long, colour: String)

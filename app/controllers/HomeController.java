@@ -12,10 +12,11 @@ public class HomeController extends Controller {
         return ok(views.html.index.render());
     }
 
-    public Result moviePage() {
-        List<Movie> movies = Movie.findAll();
+    public Result moviePage(Long id) {
+
+        Movie movie = Movie.findMovie(id);
         
-        return ok(views.html.moviePage.render(movies));
+        return ok(views.html.moviePage.render(movie));
     }
 
     public Result changeMovieColour(Long id, String colour){
@@ -26,7 +27,17 @@ public class HomeController extends Controller {
 
         movie.update();
 
-        return redirect(routes.HomeController.moviePage());
+        return redirect(routes.HomeController.moviePage(id));
+    }
+
+    public Result movieList(){
+
+        List<Movie> movies = new ArrayList<>();
+
+        movies = Movie.findAll();
+
+        return ok(views.html.movieList.render(movies));
+
     }
 
 

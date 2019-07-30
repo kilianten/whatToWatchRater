@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Tue Jul 30 11:09:39 IST 2019
+// @DATE:Tue Jul 30 14:52:00 IST 2019
 
 package router
 
@@ -41,7 +41,8 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """movie""", """controllers.HomeController.moviePage"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """movie/id""", """controllers.HomeController.moviePage(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """movieList""", """controllers.HomeController.movieList"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """changeMovieColour/""" + "$" + """id<[^/]+>/""" + "$" + """colour<[^/]+>""", """controllers.HomeController.changeMovieColour(id:Long, colour:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -71,27 +72,45 @@ class Routes(
 
   // @LINE:7
   private[this] lazy val controllers_HomeController_moviePage1_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("movie")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("movie/id")))
   )
   private[this] lazy val controllers_HomeController_moviePage1_invoker = createInvoker(
-    HomeController_1.moviePage,
+    HomeController_1.moviePage(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
       "moviePage",
+      Seq(classOf[Long]),
+      "GET",
+      this.prefix + """movie/id""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:8
+  private[this] lazy val controllers_HomeController_movieList2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("movieList")))
+  )
+  private[this] lazy val controllers_HomeController_movieList2_invoker = createInvoker(
+    HomeController_1.movieList,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "movieList",
       Nil,
       "GET",
-      this.prefix + """movie""",
+      this.prefix + """movieList""",
       """""",
       Seq()
     )
   )
 
   // @LINE:11
-  private[this] lazy val controllers_HomeController_changeMovieColour2_route = Route("GET",
+  private[this] lazy val controllers_HomeController_changeMovieColour3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("changeMovieColour/"), DynamicPart("id", """[^/]+""",true), StaticPart("/"), DynamicPart("colour", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_changeMovieColour2_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_changeMovieColour3_invoker = createInvoker(
     HomeController_1.changeMovieColour(fakeValue[Long], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -106,10 +125,10 @@ class Routes(
   )
 
   // @LINE:15
-  private[this] lazy val controllers_Assets_versioned3_route = Route("GET",
+  private[this] lazy val controllers_Assets_versioned4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned3_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned4_invoker = createInvoker(
     Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -134,20 +153,26 @@ class Routes(
   
     // @LINE:7
     case controllers_HomeController_moviePage1_route(params@_) =>
+      call(params.fromQuery[Long]("id", None)) { (id) =>
+        controllers_HomeController_moviePage1_invoker.call(HomeController_1.moviePage(id))
+      }
+  
+    // @LINE:8
+    case controllers_HomeController_movieList2_route(params@_) =>
       call { 
-        controllers_HomeController_moviePage1_invoker.call(HomeController_1.moviePage)
+        controllers_HomeController_movieList2_invoker.call(HomeController_1.movieList)
       }
   
     // @LINE:11
-    case controllers_HomeController_changeMovieColour2_route(params@_) =>
+    case controllers_HomeController_changeMovieColour3_route(params@_) =>
       call(params.fromPath[Long]("id", None), params.fromPath[String]("colour", None)) { (id, colour) =>
-        controllers_HomeController_changeMovieColour2_invoker.call(HomeController_1.changeMovieColour(id, colour))
+        controllers_HomeController_changeMovieColour3_invoker.call(HomeController_1.changeMovieColour(id, colour))
       }
   
     // @LINE:15
-    case controllers_Assets_versioned3_route(params@_) =>
+    case controllers_Assets_versioned4_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned3_invoker.call(Assets_0.versioned(path, file))
+        controllers_Assets_versioned4_invoker.call(Assets_0.versioned(path, file))
       }
   }
 }
