@@ -7,15 +7,15 @@
     @for(m <- movies){
 
         
-
+        
         @m.getBackgroundColour
 
 
-        <img onload="changeBackground(@m.getBackgroundColour)" src="/assets/@m.getMoviePoster">
+        <img onload="changeBackground('@m.getBackgroundColour')" src="/assets/@m.getMoviePoster">
         /assets/@m.getMoviePoster
         @for(colour <- m.generateColours(10)){
            
-            <div style="background-color:@colour; width:15em;">
+            <div id="div" onClick="changeBackground()"  style="background-color:@colour; width:15em;">
                     <a href="@routes.HomeController.changeMovieColour(m.getId, colour)"> @colour</a>
             </div>
 
