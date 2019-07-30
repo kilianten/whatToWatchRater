@@ -1,6 +1,27 @@
-@()
+@(movies: List[models.movie.Movie])
+<script src="@routes.Assets.versioned("javascripts/moviePage.js")" type="text/javascript"></script>
 
-main("Movie") {
+@main("Movie") {
     <h1>Welcome to Play!</h1>
+
+    @for(m <- movies){
+
+        
+
+        @m.getBackgroundColour
+
+
+        <img onload="changeBackground(@m.getBackgroundColour)" src="/assets/@m.getMoviePoster">
+        /assets/@m.getMoviePoster
+        @for(colour <- m.generateColours(10)){
+           
+            <div style="background-color:@colour; width:15em;">
+                    <a href="@routes.HomeController.changeMovieColour(m.getId, colour)"> @colour</a>
+            </div>
+
+        }
+    }
+
+
 }
   

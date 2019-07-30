@@ -4,7 +4,11 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /movie                      controllers.HomeController.index
+GET     /movie                      controllers.HomeController.moviePage
+
+
+#Moveie Colours
+GET     /changeMovieColour/:id/:colour             controllers.HomeController.changeMovieColour(id:Long, colour: String)
 
 
 # Map static resources from the /public folder to the /assets URL path

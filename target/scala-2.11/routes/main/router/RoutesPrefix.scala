@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Wed Jul 24 15:08:26 IST 2019
+// @DATE:Tue Jul 30 11:09:39 IST 2019
 
 
 package router {

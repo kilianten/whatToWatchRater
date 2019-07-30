@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Wed Jul 24 15:08:26 IST 2019
+// @DATE:Tue Jul 30 11:09:39 IST 2019
 
 import play.api.mvc.Call
 
@@ -18,30 +18,34 @@ package controllers {
     }
 
   
+    // @LINE:11
+    def changeMovieColour(id:Long, colour:String): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "changeMovieColour/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)) + "/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("colour", colour)))
+    }
+  
+    // @LINE:7
+    def moviePage(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "movie")
+    }
+  
     // @LINE:6
     def index(): Call = {
-    
-      () match {
       
-        // @LINE:6
-        case ()  =>
-          
-          Call("GET", _prefix)
-      
-      }
-    
+      Call("GET", _prefix)
     }
   
   }
 
-  // @LINE:11
+  // @LINE:15
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:11
+    // @LINE:15
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
