@@ -39,7 +39,7 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
         """),_display_(/*8.10*/movie/*8.15*/.getBackgroundColour),format.raw/*8.35*/("""
 
 
-        """),format.raw/*11.9*/("""<img onload="changeBackground('"""),_display_(/*11.41*/movie/*11.46*/.getBackgroundColour),format.raw/*11.66*/("""')" src="/assets/"""),_display_(/*11.84*/movie/*11.89*/.getMoviePoster),format.raw/*11.104*/("""">
+        """),format.raw/*11.9*/("""<img class="mask1" onload="changeBackground('"""),_display_(/*11.55*/movie/*11.60*/.getBackgroundColour),format.raw/*11.80*/("""')" src="/assets/"""),_display_(/*11.98*/movie/*11.103*/.getMoviePoster),format.raw/*11.118*/("""">
         
         """),_display_(/*13.10*/for(colour <- movie.generateColours(10)) yield /*13.50*/{_display_(Seq[Any](format.raw/*13.51*/("""
            
@@ -65,10 +65,10 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
 
               /*
                   -- GENERATED --
-                  DATE: Tue Jul 30 14:44:36 IST 2019
+                  DATE: Tue Jul 30 15:22:51 IST 2019
                   SOURCE: /home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/moviePage.scala.html
-                  HASH: 6cc2d40dfb9cf82245aac22c493ec954272cf341
-                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1266->131|1287->144|1326->146|1357->151|1420->188|1433->193|1473->213|1511->224|1570->256|1584->261|1625->281|1670->299|1684->304|1721->319|1769->340|1825->380|1864->381|1917->406|2013->475|2040->481|2113->527|2128->533|2203->587|2234->591|2262->597|2327->631|2359->633
+                  HASH: 3107643059beff93ecccbd63f4afc279eecfa373
+                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1266->131|1287->144|1326->146|1357->151|1420->188|1433->193|1473->213|1511->224|1584->270|1598->275|1639->295|1684->313|1699->318|1736->333|1784->354|1840->394|1879->395|1932->420|2028->489|2055->495|2128->541|2143->547|2218->601|2249->605|2277->611|2342->645|2374->647
                   LINES: 28->1|33->2|33->2|33->2|33->2|35->4|35->4|35->4|36->5|39->8|39->8|39->8|42->11|42->11|42->11|42->11|42->11|42->11|42->11|44->13|44->13|44->13|46->15|46->15|46->15|47->16|47->16|47->16|47->16|47->16|50->19|51->20
                   -- GENERATED --
               */

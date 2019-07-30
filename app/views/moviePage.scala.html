@@ -8,7 +8,7 @@
         @movie.getBackgroundColour
 
 
-        <img onload="changeBackground('@movie.getBackgroundColour')" src="/assets/@movie.getMoviePoster">
+        <img class="mask1" onload="changeBackground('@movie.getBackgroundColour')" src="/assets/@movie.getMoviePoster">
         
         @for(colour <- movie.generateColours(10)){
            
