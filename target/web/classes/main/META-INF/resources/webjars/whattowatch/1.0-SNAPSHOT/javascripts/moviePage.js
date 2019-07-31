@@ -1,6 +1,4 @@
 
 function changeBackground(colour){
-    console.log("sd");
-
-    document.getElementById("body").style.backgroundColor = colour;
+    document.getElementById("main").style.backgroundColor = colour;
 };

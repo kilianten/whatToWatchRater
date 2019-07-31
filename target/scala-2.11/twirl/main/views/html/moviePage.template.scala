@@ -31,24 +31,37 @@ object moviePage extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.
 
 
 Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/.Assets.versioned("javascripts/moviePage.js")),format.raw/*2.66*/("""" type="text/javascript"></script>
-
-"""),_display_(/*4.2*/main("Movie")/*4.15*/ {_display_(Seq[Any](format.raw/*4.17*/("""
-    """),format.raw/*5.5*/("""<h1>Welcome to Play!</h1>
+<link rel="stylesheet" media="screen" href=""""),_display_(/*3.46*/routes/*3.52*/.Assets.versioned("stylesheets/moviePage.css")),format.raw/*3.98*/("""">
 
 
-        """),_display_(/*8.10*/movie/*8.15*/.getBackgroundColour),format.raw/*8.35*/("""
+"""),_display_(/*6.2*/main("Movie")/*6.15*/ {_display_(Seq[Any](format.raw/*6.17*/("""
 
 
-        """),format.raw/*11.9*/("""<img class="mask1" onload="changeBackground('"""),_display_(/*11.55*/movie/*11.60*/.getBackgroundColour),format.raw/*11.80*/("""')" src="/assets/"""),_display_(/*11.98*/movie/*11.103*/.getMoviePoster),format.raw/*11.118*/("""">
+    """),format.raw/*9.5*/("""<div id="main"> 
+
+    <img id="bannerImage" class="mask1" src='/assets/images/movies/movieBanners/"""),_display_(/*11.82*/movie/*11.87*/.getId),format.raw/*11.93*/("""-Banner.jpg'>
+    <h1 id="movieTitle">"""),_display_(/*12.26*/movie/*12.31*/.getTitle),format.raw/*12.40*/("""</h1>
+
+        <img id="moviePoster" onload="changeBackground('"""),_display_(/*14.58*/movie/*14.63*/.getBackgroundColour),format.raw/*14.83*/("""')" src="/assets/"""),_display_(/*14.101*/movie/*14.106*/.getMoviePoster),format.raw/*14.121*/("""">
         
-        """),_display_(/*13.10*/for(colour <- movie.generateColours(10)) yield /*13.50*/{_display_(Seq[Any](format.raw/*13.51*/("""
-           
-            """),format.raw/*15.13*/("""<div id="div" onClick="changeBackground()"  style="background-color:"""),_display_(/*15.82*/colour),format.raw/*15.88*/("""; width:15em;">
-                    <a href=""""),_display_(/*16.31*/routes/*16.37*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*16.91*/(""""> """),_display_(/*16.95*/colour),format.raw/*16.101*/("""</a>
-            </div>
+        <br>
+        <br>
 
-        """)))}),format.raw/*19.10*/("""
-""")))}),format.raw/*20.2*/("""
+        <div id="colour-select-container">
+            """),_display_(/*20.14*/for(colour <- movie.generateColours(10)) yield /*20.54*/{_display_(Seq[Any](format.raw/*20.55*/("""
+            
+            """),format.raw/*22.13*/("""<a href=""""),_display_(/*22.23*/routes/*22.29*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*22.83*/("""">
+                <div id="colour-select" onClick="changeBackground()"  style="background-color:"""),_display_(/*23.96*/colour),format.raw/*23.102*/(""";">
+                </div>
+            </a>
+
+            """)))}),format.raw/*27.14*/("""
+        """),format.raw/*28.9*/("""</div> <!--Div for color select container-->    
+    
+    <br>
+
+    </div> <!---  Main Div  ---->
+""")))}),format.raw/*33.2*/("""
   """))
       }
     }
@@ -65,11 +78,11 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
 
               /*
                   -- GENERATED --
-                  DATE: Tue Jul 30 15:22:51 IST 2019
+                  DATE: Wed Jul 31 15:12:19 IST 2019
                   SOURCE: /home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/moviePage.scala.html
-                  HASH: 3107643059beff93ecccbd63f4afc279eecfa373
-                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1266->131|1287->144|1326->146|1357->151|1420->188|1433->193|1473->213|1511->224|1584->270|1598->275|1639->295|1684->313|1699->318|1736->333|1784->354|1840->394|1879->395|1932->420|2028->489|2055->495|2128->541|2143->547|2218->601|2249->605|2277->611|2342->645|2374->647
-                  LINES: 28->1|33->2|33->2|33->2|33->2|35->4|35->4|35->4|36->5|39->8|39->8|39->8|42->11|42->11|42->11|42->11|42->11|42->11|42->11|44->13|44->13|44->13|46->15|46->15|46->15|47->16|47->16|47->16|47->16|47->16|50->19|51->20
+                  HASH: fde0b039407374b69f352d6f92f35dd10f9d5f3a
+                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1310->174|1324->180|1390->226|1421->232|1442->245|1481->247|1514->254|1640->353|1654->358|1681->364|1747->403|1761->408|1791->417|1882->481|1896->486|1937->506|1983->524|1998->529|2035->544|2157->639|2213->679|2252->680|2306->706|2343->716|2358->722|2433->776|2558->874|2586->880|2675->938|2711->947|2840->1046
+                  LINES: 28->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|37->6|37->6|37->6|40->9|42->11|42->11|42->11|43->12|43->12|43->12|45->14|45->14|45->14|45->14|45->14|45->14|51->20|51->20|51->20|53->22|53->22|53->22|53->22|54->23|54->23|58->27|59->28|64->33
                   -- GENERATED --
               */
           
