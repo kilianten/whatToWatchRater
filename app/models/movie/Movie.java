@@ -13,6 +13,8 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
+import java.text.SimpleDateFormat;
+
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -26,7 +28,7 @@ public class Movie extends Model {
     private String title;
     @Constraints.Required
 
-    @OneToMany(mappedBy="movie_rating", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy="movie", cascade = CascadeType.ALL) 
     private MovieRating globalRating;
 
     private Date releaseDate;
@@ -35,9 +37,10 @@ public class Movie extends Model {
 
     private List<String> pageColours;
 
-    private List<Director> dirctor;
+    private List<Director> Director;
 
     private String moviePoster;
+
 
     public Long getId(){
         return id;
@@ -63,8 +66,10 @@ public class Movie extends Model {
         this.globalRating = globalRating;
     }
 
-    public Date getReleaseDate(){
-        return releaseDate;
+    public String getReleaseDate(){
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        String releaseDateString = format.format(releaseDate); 
+        return releaseDateString;
     }
 
     public void setReleaseDate(Date date){
@@ -88,11 +93,11 @@ public class Movie extends Model {
     }
 
     public List<Director> getDirector(){
-        return dirctor;
+        return Director;
     }
 
     public void setDirector(List<Director> director){
-        this.dirctor = director;
+        this.Director = director;
     }
 
     public void setBackgroundColour(String backgroundColour){

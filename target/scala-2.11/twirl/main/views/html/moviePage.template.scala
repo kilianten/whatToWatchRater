@@ -45,23 +45,50 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
         <img id="moviePoster" onload="changeBackground('"""),_display_(/*14.58*/movie/*14.63*/.getBackgroundColour),format.raw/*14.83*/("""')" src="/assets/"""),_display_(/*14.101*/movie/*14.106*/.getMoviePoster),format.raw/*14.121*/("""">
         
         <br>
+        <hr>
+        <h3>Release Date: """),_display_(/*18.28*/movie/*18.33*/.getReleaseDate),format.raw/*18.48*/("""</h3>
+
+        <h2>"""),_display_(/*20.14*/movie/*20.19*/.getMovieRating.getTotal),format.raw/*20.43*/("""</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
 
         <div id="colour-select-container">
-            """),_display_(/*20.14*/for(colour <- movie.generateColours(10)) yield /*20.54*/{_display_(Seq[Any](format.raw/*20.55*/("""
+            """),_display_(/*47.14*/for(colour <- movie.generateColours(10)) yield /*47.54*/{_display_(Seq[Any](format.raw/*47.55*/("""
             
-            """),format.raw/*22.13*/("""<a href=""""),_display_(/*22.23*/routes/*22.29*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*22.83*/("""">
-                <div id="colour-select" onClick="changeBackground()"  style="background-color:"""),_display_(/*23.96*/colour),format.raw/*23.102*/(""";">
+            """),format.raw/*49.13*/("""<a href=""""),_display_(/*49.23*/routes/*49.29*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*49.83*/("""">
+                <div id="colour-select" onClick="changeBackground()"  style="background-color:"""),_display_(/*50.96*/colour),format.raw/*50.102*/(""";">
                 </div>
             </a>
 
-            """)))}),format.raw/*27.14*/("""
-        """),format.raw/*28.9*/("""</div> <!--Div for color select container-->    
+            """)))}),format.raw/*54.14*/("""
+        """),format.raw/*55.9*/("""</div> <!--Div for color select container-->    
     
     <br>
 
     </div> <!---  Main Div  ---->
-""")))}),format.raw/*33.2*/("""
+""")))}),format.raw/*60.2*/("""
   """))
       }
     }
@@ -78,11 +105,11 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
 
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 31 15:12:19 IST 2019
+                  DATE: Wed Jul 31 17:01:23 IST 2019
                   SOURCE: /home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/moviePage.scala.html
-                  HASH: fde0b039407374b69f352d6f92f35dd10f9d5f3a
-                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1310->174|1324->180|1390->226|1421->232|1442->245|1481->247|1514->254|1640->353|1654->358|1681->364|1747->403|1761->408|1791->417|1882->481|1896->486|1937->506|1983->524|1998->529|2035->544|2157->639|2213->679|2252->680|2306->706|2343->716|2358->722|2433->776|2558->874|2586->880|2675->938|2711->947|2840->1046
-                  LINES: 28->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|37->6|37->6|37->6|40->9|42->11|42->11|42->11|43->12|43->12|43->12|45->14|45->14|45->14|45->14|45->14|45->14|51->20|51->20|51->20|53->22|53->22|53->22|53->22|54->23|54->23|58->27|59->28|64->33
+                  HASH: cb730c625a3e3e723d597a7e03391e7f5ad32729
+                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1310->174|1324->180|1390->226|1421->232|1442->245|1481->247|1514->254|1640->353|1654->358|1681->364|1747->403|1761->408|1791->417|1882->481|1896->486|1937->506|1983->524|1998->529|2035->544|2127->609|2141->614|2177->629|2224->649|2238->654|2283->678|2685->1053|2741->1093|2780->1094|2834->1120|2871->1130|2886->1136|2961->1190|3086->1288|3114->1294|3203->1352|3239->1361|3368->1460
+                  LINES: 28->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|37->6|37->6|37->6|40->9|42->11|42->11|42->11|43->12|43->12|43->12|45->14|45->14|45->14|45->14|45->14|45->14|49->18|49->18|49->18|51->20|51->20|51->20|78->47|78->47|78->47|80->49|80->49|80->49|80->49|81->50|81->50|85->54|86->55|91->60
                   -- GENERATED --
               */
           

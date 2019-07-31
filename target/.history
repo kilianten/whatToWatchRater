@@ -15,3 +15,9 @@ run
 exit
 run
 exit
+run
+h2-browser
+r
+h2-browser
+run
+exit

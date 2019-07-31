@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/moviePage.scala.html:11:22: value getIdBanner is not a member of models.movie.Movie[0m
-[0m[[0m[31merror[0m] [0m[0m    <img src="@movie.getIdBanner">[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/ktennyson/Documents/pacticeFiles/whattowatch/app/models/movie/MovieRating.java:61:1: method getRating() is already defined in class models.movie.MovieRating[0m
+[0m[[0m[31merror[0m] [0m[0m    public double getRating(){[0m

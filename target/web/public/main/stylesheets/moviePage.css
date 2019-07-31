@@ -31,9 +31,12 @@ border-radius: 2em;
 }
 
 #moviePoster{
+    position:relative;
     margin-left: 2em;
-    width: 15em;
+    top: -10em;
+    width: 17em;
     border-radius: 10px;
+    float:left;
 }
 
 #body{
@@ -54,3 +57,8 @@ border-radius: 2em;
     width:96%;
     height: 40em;
 }
+
+h3{
+    display:inline;
+    padding-left: 2em;
+}   
