@@ -74,21 +74,36 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
         <br>
         <br>
 
+        <div id="fillerContainer">
+
+
+
+        """),_display_(/*50.10*/for(i <- 0 until 10) yield /*50.30*/{_display_(Seq[Any](format.raw/*50.31*/("""
+                """),format.raw/*51.17*/("""<a href=""""),_display_(/*51.27*/routes/*51.33*/.HomeController.rateMovie(i, movie.getId)),format.raw/*51.74*/("""">
+                        <div onmouseover="fillBlocks(this)" onmouseout="emptyBlocks()" onclick="rate(this)" id=""""),_display_(/*52.114*/i),format.raw/*52.115*/("""" class="box">
+                                        <img class="starImage" src="PNGIX.com_star-outline-png_1183450.png">
+                        </div>
+                </a>    
+        """)))}),format.raw/*56.10*/("""
+        
+        """),format.raw/*58.9*/("""</div>
+
+
         <div id="colour-select-container">
-            """),_display_(/*47.14*/for(colour <- movie.generateColours(10)) yield /*47.54*/{_display_(Seq[Any](format.raw/*47.55*/("""
+            """),_display_(/*62.14*/for(colour <- movie.generateColours(10)) yield /*62.54*/{_display_(Seq[Any](format.raw/*62.55*/("""
             
-            """),format.raw/*49.13*/("""<a href=""""),_display_(/*49.23*/routes/*49.29*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*49.83*/("""">
-                <div id="colour-select" onClick="changeBackground()"  style="background-color:"""),_display_(/*50.96*/colour),format.raw/*50.102*/(""";">
+            """),format.raw/*64.13*/("""<a href=""""),_display_(/*64.23*/routes/*64.29*/.HomeController.changeMovieColour(movie.getId, colour)),format.raw/*64.83*/("""">
+                <div id="colour-select" onClick="changeBackground()"  style="background-color:"""),_display_(/*65.96*/colour),format.raw/*65.102*/(""";">
                 </div>
             </a>
 
-            """)))}),format.raw/*54.14*/("""
-        """),format.raw/*55.9*/("""</div> <!--Div for color select container-->    
+            """)))}),format.raw/*69.14*/("""
+        """),format.raw/*70.9*/("""</div> <!--Div for color select container-->    
     
     <br>
 
     </div> <!---  Main Div  ---->
-""")))}),format.raw/*60.2*/("""
+""")))}),format.raw/*75.2*/("""
   """))
       }
     }
@@ -105,11 +120,11 @@ Seq[Any](format.raw/*2.1*/("""<script src=""""),_display_(/*2.15*/routes/*2.21*/
 
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 31 17:01:23 IST 2019
+                  DATE: Tue Aug 13 11:46:03 IST 2019
                   SOURCE: /home/ktennyson/Documents/pacticeFiles/whattowatch/app/views/moviePage.scala.html
-                  HASH: cb730c625a3e3e723d597a7e03391e7f5ad32729
-                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1310->174|1324->180|1390->226|1421->232|1442->245|1481->247|1514->254|1640->353|1654->358|1681->364|1747->403|1761->408|1791->417|1882->481|1896->486|1937->506|1983->524|1998->529|2035->544|2127->609|2141->614|2177->629|2224->649|2238->654|2283->678|2685->1053|2741->1093|2780->1094|2834->1120|2871->1130|2886->1136|2961->1190|3086->1288|3114->1294|3203->1352|3239->1361|3368->1460
-                  LINES: 28->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|37->6|37->6|37->6|40->9|42->11|42->11|42->11|43->12|43->12|43->12|45->14|45->14|45->14|45->14|45->14|45->14|49->18|49->18|49->18|51->20|51->20|51->20|78->47|78->47|78->47|80->49|80->49|80->49|80->49|81->50|81->50|85->54|86->55|91->60
+                  HASH: 6b40cd71e27be4a1439eb6815064b3144becbb66
+                  MATRIX: 964->1|1085->29|1125->43|1139->49|1204->94|1310->174|1324->180|1390->226|1421->232|1442->245|1481->247|1514->254|1640->353|1654->358|1681->364|1747->403|1761->408|1791->417|1882->481|1896->486|1937->506|1983->524|1998->529|2035->544|2127->609|2141->614|2177->629|2224->649|2238->654|2283->678|2676->1044|2712->1064|2751->1065|2796->1082|2833->1092|2848->1098|2910->1139|3054->1255|3077->1256|3297->1445|3342->1463|3434->1528|3490->1568|3529->1569|3583->1595|3620->1605|3635->1611|3710->1665|3835->1763|3863->1769|3952->1827|3988->1836|4117->1935
+                  LINES: 28->1|33->2|33->2|33->2|33->2|34->3|34->3|34->3|37->6|37->6|37->6|40->9|42->11|42->11|42->11|43->12|43->12|43->12|45->14|45->14|45->14|45->14|45->14|45->14|49->18|49->18|49->18|51->20|51->20|51->20|81->50|81->50|81->50|82->51|82->51|82->51|82->51|83->52|83->52|87->56|89->58|93->62|93->62|93->62|95->64|95->64|95->64|95->64|96->65|96->65|100->69|101->70|106->75
                   -- GENERATED --
               */
           

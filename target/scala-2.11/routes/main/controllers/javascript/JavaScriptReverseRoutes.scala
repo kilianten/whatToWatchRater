@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/ktennyson/Documents/pacticeFiles/whattowatch/conf/routes
-// @DATE:Tue Jul 30 14:52:00 IST 2019
+// @DATE:Tue Aug 13 11:46:03 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -19,22 +19,32 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:8
+    def movieList: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.movieList",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "movieList"})
+        }
+      """
+    )
+  
+    // @LINE:10
+    def rateMovie: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.rateMovie",
+      """
+        function(rating0,id1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rateMovie/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("rating", rating0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id1))})
+        }
+      """
+    )
+  
+    // @LINE:13
     def changeMovieColour: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.changeMovieColour",
       """
         function(id0,colour1) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "changeMovieColour/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("colour", colour1))})
-        }
-      """
-    )
-  
-    // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
         }
       """
     )
@@ -49,19 +59,19 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
-    def movieList: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.movieList",
+    // @LINE:6
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.index",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "movieList"})
+          return _wA({method:"GET", url:"""" + _prefix + """"})
         }
       """
     )
   
   }
 
-  // @LINE:15
+  // @LINE:17
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -69,7 +79,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:17
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

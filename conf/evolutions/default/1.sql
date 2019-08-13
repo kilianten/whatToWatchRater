@@ -27,23 +27,45 @@ create table movie_rating (
   constraint pk_movie_rating primary key (id)
 );
 
+create table personal_rating (
+  id                            bigint auto_increment not null,
+  rating                        double not null,
+  user_id                       bigint,
+  movie_id                      bigint,
+  constraint uq_personal_rating_movie_id unique (movie_id),
+  constraint pk_personal_rating primary key (id)
+);
+
+create table user (
+  id                            bigint auto_increment not null,
+  username                      varchar(255),
+  constraint pk_user primary key (id)
+);
+
 alter table movie_rating add constraint fk_movie_rating_movie_id foreign key (movie_id) references movie (id) on delete restrict on update restrict;
 
-INSERT INTO movie VALUES(1, 'Inception', '2010-07-16', 'white', 'images/movies/moviePosters/1.jpg');
-INSERT INTO movie VALUES(2, 'Little Miss Sunshine', '2006-09-08', 'white', 'images/movies/moviePosters/2.jpg');
-INSERT INTO movie VALUES(3, 'Climax', '2018-09-21', 'white','images/movies/moviePosters/3.jpg');
+create index ix_personal_rating_user_id on personal_rating (user_id);
+alter table personal_rating add constraint fk_personal_rating_user_id foreign key (user_id) references user (id) on delete restrict on update restrict;
 
-INSERT INTO movie_rating VALUES(1,0,0,0,1);
-INSERT INTO movie_rating VALUES(2,0,0,0,2);
-INSERT INTO movie_rating VALUES(3,0,0,0,3);
+alter table personal_rating add constraint fk_personal_rating_movie_id foreign key (movie_id) references movie (id) on delete restrict on update restrict;
+
 
 # --- !Downs
 
 alter table movie_rating drop constraint if exists fk_movie_rating_movie_id;
+
+alter table personal_rating drop constraint if exists fk_personal_rating_user_id;
+drop index if exists ix_personal_rating_user_id;
+
+alter table personal_rating drop constraint if exists fk_personal_rating_movie_id;
 
 drop table if exists director;
 
 drop table if exists movie;
 
 drop table if exists movie_rating;
+
+drop table if exists personal_rating;
+
+drop table if exists user;
 

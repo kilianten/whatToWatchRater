@@ -69,4 +69,14 @@ public class MovieRating extends Model {
         this.movie = movie;
     }
 
+    public void changeRating(int newRating, int oldRating){
+
+    }
+
+    public static Finder<Long, MovieRating> find = new Finder<Long, MovieRating>(MovieRating.class);
+
+    public static MovieRating findMovieRating(Long id){
+        return find.query().where().eq("id", id).findOne();
+    }
+
 }

@@ -43,6 +43,21 @@
         <br>
         <br>
 
+        <div id="fillerContainer">
+
+
+
+        @for(i <- 0 until 10){
+                <a href="@routes.HomeController.rateMovie(i, movie.getId)">
+                        <div onmouseover="fillBlocks(this)" onmouseout="emptyBlocks()" onclick="rate(this)" id="@i" class="box">
+                                        <img class="starImage" src="PNGIX.com_star-outline-png_1183450.png">
+                        </div>
+                </a>    
+        }
+        
+        </div>
+
+
         <div id="colour-select-container">
             @for(colour <- movie.generateColours(10)){
             

@@ -7,6 +7,8 @@ GET     /                           controllers.HomeController.index
 GET     /movie/id                   controllers.HomeController.moviePage(id:Long)
 GET     /movieList                  controllers.HomeController.movieList
 
+GET     /rateMovie/:rating/:id          controllers.HomeController.rateMovie(rating: Integer, id:Long)
+
 #Moveie Colours
 GET     /changeMovieColour/:id/:colour             controllers.HomeController.changeMovieColour(id:Long, colour: String)
 

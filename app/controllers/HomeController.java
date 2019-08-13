@@ -40,5 +40,18 @@ public class HomeController extends Controller {
 
     }
 
+    public Result rateMovie(int rating, long movieid){
+
+        Movie movie = Movie.findMovie(id);
+
+        User user = User.findUser("k10");
+
+        if(user.checkRating(movieid) == null){
+            PersonalRating prating = New PersonalRating();
+        }
+
+        return ok(user.getUsername());
+    }
+
 
 }
