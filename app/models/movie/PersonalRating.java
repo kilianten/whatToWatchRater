@@ -18,7 +18,7 @@ public class PersonalRating extends Model {
     private Long id;
     @Constraints.Required
 
-    private double rating;
+    private int rating;
 
     @ManyToOne
     private User user;
@@ -35,11 +35,11 @@ public class PersonalRating extends Model {
         this.id = id;
     }
 
-    public void setRating(double rating){
+    public void setRating(int rating){
         this.rating = rating;
     }
 
-    public double getRating(){
+    public int getRating(){
         return rating;
     }
 

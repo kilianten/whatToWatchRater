@@ -4,7 +4,7 @@
 		module="whattowatch-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190724150603"
+		publication="20190814142635"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

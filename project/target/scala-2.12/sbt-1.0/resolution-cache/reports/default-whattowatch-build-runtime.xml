@@ -9,7 +9,7 @@
 		extra-sbtVersion="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190724150603"/>
+		date="20190814142635"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbt" name="sbt-play-ebean">
 			<revision name="5.0.0" status="release" pubdate="20190131025034" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ebean" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="43">
@@ -24,13 +24,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="sbt-plugin">
-			<revision name="2.7.0-RC9" status="release" pubdate="20190110202613" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" homepage="https://playframework.com" extra-scalaVersion="2.12" extra-sbtVersion="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="59">
+			<revision name="2.7.0-RC9" status="release" pubdate="20190110202613" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-scalaVersion="2.12" extra-sbtVersion="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="59">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3604" time="978" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.play/sbt-plugin/ivy-2.7.0-RC9.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.play/sbt-plugin/ivy-2.7.0-RC9.xml.original" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.7.0-RC9/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="3604" time="0" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.play/sbt-plugin/ivy-2.7.0-RC9.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.7.0-RC9/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-play-ebean" conf="compile" rev="2.7.0-RC9" rev-constraint-default="2.7.0-RC9" rev-constraint-dynamic="2.7.0-RC9" callerrev="5.0.0" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<caller organisation="default" name="whattowatch-build" conf="compile, runtime" rev="2.6.12" rev-constraint-default="2.6.12" rev-constraint-dynamic="2.6.12" callerrev="0.1.0-SNAPSHOT" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
-					<artifact name="sbt-plugin" type="jar" ext="jar" status="successful" details="" size="217617" time="1601" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.play/sbt-plugin/jars/sbt-plugin-2.7.0-RC9.jar">
+					<artifact name="sbt-plugin" type="jar" ext="jar" status="no" details="" size="217617" time="0" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.play/sbt-plugin/jars/sbt-plugin-2.7.0-RC9.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.7.0-RC9/jars/sbt-plugin.jar"/>
 					</artifact>
 				</artifacts>
@@ -1024,13 +1024,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.sbt" name="sbt-twirl">
-			<revision name="1.4.0-RC4" status="release" pubdate="20181128153140" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" homepage="https://github.com/playframework/twirl" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="69">
+			<revision name="1.4.0-RC4" status="release" pubdate="20181128153140" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" extra-scalaVersion="2.12" extra-sbtVersion="1.0" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="69">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1783" time="1879" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.sbt/sbt-twirl/ivy-1.4.0-RC4.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.sbt/sbt-twirl/ivy-1.4.0-RC4.xml.original" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-twirl/scala_2.12/sbt_1.0/1.4.0-RC4/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="1783" time="0" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.sbt/sbt-twirl/ivy-1.4.0-RC4.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-twirl/scala_2.12/sbt_1.0/1.4.0-RC4/ivys/ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="1.3.14" rev-constraint-default="1.3.14" rev-constraint-dynamic="1.3.14" callerrev="2.6.12" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="1.4.0-RC4" rev-constraint-default="1.4.0-RC4" rev-constraint-dynamic="1.4.0-RC4" callerrev="2.7.0-RC9" extra-scalaVersion="2.12" extra-sbtVersion="1.0"/>
 				<artifacts>
-					<artifact name="sbt-twirl" type="jar" ext="jar" status="successful" details="" size="54916" time="1074" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.sbt/sbt-twirl/jars/sbt-twirl-1.4.0-RC4.jar">
+					<artifact name="sbt-twirl" type="jar" ext="jar" status="no" details="" size="54916" time="0" location="/home/ktennyson/.ivy2/cache/scala_2.12/sbt_1.0/com.typesafe.sbt/sbt-twirl/jars/sbt-twirl-1.4.0-RC4.jar">
 						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-twirl/scala_2.12/sbt_1.0/1.4.0-RC4/jars/sbt-twirl.jar"/>
 					</artifact>
 				</artifacts>
@@ -1045,13 +1045,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="twirl-compiler_2.12">
-			<revision name="1.4.0-RC4" status="release" pubdate="20181128153701" resolver="public" artresolver="public" homepage="https://github.com/playframework/twirl" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="70">
+			<revision name="1.4.0-RC4" status="release" pubdate="20181128153701" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="70">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2315" time="445" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-compiler_2.12/ivy-1.4.0-RC4.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-compiler_2.12/ivy-1.4.0-RC4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-compiler_2.12/1.4.0-RC4/twirl-compiler_2.12-1.4.0-RC4.pom"/>
+				<metadata-artifact status="no" details="" size="3292" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-compiler_2.12/ivy-1.4.0-RC4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-compiler_2.12/1.4.0-RC4/twirl-compiler_2.12-1.4.0-RC4.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-twirl" conf="compile" rev="1.4.0-RC4" rev-constraint-default="1.4.0-RC4" rev-constraint-dynamic="1.4.0-RC4" callerrev="1.4.0-RC4"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-twirl" conf="compile" rev="1.3.14" rev-constraint-default="1.3.14" rev-constraint-dynamic="1.3.14" callerrev="1.3.14"/>
 				<artifacts>
-					<artifact name="twirl-compiler_2.12" type="jar" ext="jar" status="successful" details="" size="67876" time="77" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-compiler_2.12/jars/twirl-compiler_2.12-1.4.0-RC4.jar">
+					<artifact name="twirl-compiler_2.12" type="jar" ext="jar" status="no" details="" size="67876" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-compiler_2.12/jars/twirl-compiler_2.12-1.4.0-RC4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-compiler_2.12/1.4.0-RC4/twirl-compiler_2.12-1.4.0-RC4.jar"/>
 					</artifact>
 				</artifacts>
@@ -1066,13 +1066,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="twirl-parser_2.12">
-			<revision name="1.4.0-RC4" status="release" pubdate="20181128161459" resolver="public" artresolver="public" homepage="https://github.com/playframework/twirl" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+			<revision name="1.4.0-RC4" status="release" pubdate="20181128161459" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2180" time="72" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-parser_2.12/ivy-1.4.0-RC4.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-parser_2.12/ivy-1.4.0-RC4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-parser_2.12/1.4.0-RC4/twirl-parser_2.12-1.4.0-RC4.pom"/>
+				<metadata-artifact status="no" details="" size="3078" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-parser_2.12/ivy-1.4.0-RC4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-parser_2.12/1.4.0-RC4/twirl-parser_2.12-1.4.0-RC4.pom"/>
 				<caller organisation="com.typesafe.play" name="twirl-compiler_2.12" conf="default, compile, runtime, master" rev="1.3.14" rev-constraint-default="1.3.14" rev-constraint-dynamic="1.3.14" callerrev="1.3.14"/>
 				<caller organisation="com.typesafe.play" name="twirl-compiler_2.12" conf="default, compile, runtime, master" rev="1.4.0-RC4" rev-constraint-default="1.4.0-RC4" rev-constraint-dynamic="1.4.0-RC4" callerrev="1.4.0-RC4"/>
 				<artifacts>
-					<artifact name="twirl-parser_2.12" type="jar" ext="jar" status="successful" details="" size="79355" time="230" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-parser_2.12/jars/twirl-parser_2.12-1.4.0-RC4.jar">
+					<artifact name="twirl-parser_2.12" type="jar" ext="jar" status="no" details="" size="79355" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-parser_2.12/jars/twirl-parser_2.12-1.4.0-RC4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-parser_2.12/1.4.0-RC4/twirl-parser_2.12-1.4.0-RC4.jar"/>
 					</artifact>
 				</artifacts>
@@ -1087,13 +1087,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="run-support_2.12">
-			<revision name="2.7.0-RC9" status="release" pubdate="20190110202618" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="63">
+			<revision name="2.7.0-RC9" status="release" pubdate="20190110202618" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="63">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2855" time="92" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/run-support_2.12/ivy-2.7.0-RC9.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/com.typesafe.play/run-support_2.12/ivy-2.7.0-RC9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/run-support_2.12/2.7.0-RC9/run-support_2.12-2.7.0-RC9.pom"/>
+				<metadata-artifact status="no" details="" size="3684" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/run-support_2.12/ivy-2.7.0-RC9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/run-support_2.12/2.7.0-RC9/run-support_2.12-2.7.0-RC9.pom"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="2.6.12" rev-constraint-default="2.6.12" rev-constraint-dynamic="2.6.12" callerrev="2.6.12"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="2.7.0-RC9" rev-constraint-default="2.7.0-RC9" rev-constraint-dynamic="2.7.0-RC9" callerrev="2.7.0-RC9" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html"/>
 				<artifacts>
-					<artifact name="run-support_2.12" type="jar" ext="jar" status="successful" details="" size="71828" time="290" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/run-support_2.12/jars/run-support_2.12-2.7.0-RC9.jar">
+					<artifact name="run-support_2.12" type="jar" ext="jar" status="no" details="" size="71828" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/run-support_2.12/jars/run-support_2.12-2.7.0-RC9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/run-support_2.12/2.7.0-RC9/run-support_2.12-2.7.0-RC9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1159,7 +1159,7 @@
 				<caller organisation="com.typesafe.play" name="run-support_2.12" conf="default, compile, runtime, master" rev="2.6.12" rev-constraint-default="2.6.12" rev-constraint-dynamic="2.6.12" callerrev="2.6.12"/>
 				<caller organisation="com.typesafe.play" name="run-support_2.12" conf="default, compile, runtime, master" rev="2.7.0-RC9" rev-constraint-default="2.7.0-RC9" rev-constraint-dynamic="2.7.0-RC9" callerrev="2.7.0-RC9"/>
 				<artifacts>
-					<artifact name="build-link" type="jar" ext="jar" status="successful" details="" size="3374" time="82" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.7.0-RC9.jar">
+					<artifact name="build-link" type="jar" ext="jar" status="no" details="" size="3374" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.7.0-RC9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.7.0-RC9/build-link-2.7.0-RC9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1180,7 +1180,7 @@
 				<caller organisation="com.typesafe.play" name="build-link" conf="compile, runtime" rev="2.6.12" rev-constraint-default="2.6.12" rev-constraint-dynamic="2.6.12" callerrev="2.6.12"/>
 				<caller organisation="com.typesafe.play" name="build-link" conf="compile, runtime" rev="2.7.0-RC9" rev-constraint-default="2.7.0-RC9" rev-constraint-dynamic="2.7.0-RC9" callerrev="2.7.0-RC9"/>
 				<artifacts>
-					<artifact name="play-exceptions" type="jar" ext="jar" status="successful" details="" size="4811" time="90" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.7.0-RC9.jar">
+					<artifact name="play-exceptions" type="jar" ext="jar" status="no" details="" size="4811" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.7.0-RC9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.7.0-RC9/play-exceptions-2.7.0-RC9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1195,13 +1195,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="sbt-routes-compiler_2.12">
-			<revision name="2.7.0-RC9" status="release" pubdate="20190110202634" resolver="public" artresolver="public" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="60">
+			<revision name="2.7.0-RC9" status="release" pubdate="20190110202634" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="60">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="3113" time="146" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/sbt-routes-compiler_2.12/ivy-2.7.0-RC9.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/com.typesafe.play/sbt-routes-compiler_2.12/ivy-2.7.0-RC9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-routes-compiler_2.12/2.7.0-RC9/sbt-routes-compiler_2.12-2.7.0-RC9.pom"/>
+				<metadata-artifact status="no" details="" size="3856" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/sbt-routes-compiler_2.12/ivy-2.7.0-RC9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-routes-compiler_2.12/2.7.0-RC9/sbt-routes-compiler_2.12-2.7.0-RC9.pom"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="2.6.12" rev-constraint-default="2.6.12" rev-constraint-dynamic="2.6.12" callerrev="2.6.12"/>
 				<caller organisation="com.typesafe.play" name="sbt-plugin" conf="compile" rev="2.7.0-RC9" rev-constraint-default="2.7.0-RC9" rev-constraint-dynamic="2.7.0-RC9" callerrev="2.7.0-RC9" extra-info.apiURL="https://www.playframework.com/documentation/2.7.0-RC9/api/scala/index.html"/>
 				<artifacts>
-					<artifact name="sbt-routes-compiler_2.12" type="jar" ext="jar" status="successful" details="" size="192587" time="212" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/sbt-routes-compiler_2.12/jars/sbt-routes-compiler_2.12-2.7.0-RC9.jar">
+					<artifact name="sbt-routes-compiler_2.12" type="jar" ext="jar" status="no" details="" size="192587" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/sbt-routes-compiler_2.12/jars/sbt-routes-compiler_2.12-2.7.0-RC9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-routes-compiler_2.12/2.7.0-RC9/sbt-routes-compiler_2.12-2.7.0-RC9.jar"/>
 					</artifact>
 				</artifacts>
@@ -1250,15 +1250,15 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="twirl-api_2.12">
-			<revision name="1.4.0-RC4" status="release" pubdate="20181128155747" resolver="public" artresolver="public" homepage="https://github.com/playframework/twirl" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
+			<revision name="1.4.0-RC4" status="release" pubdate="20181128155747" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1910" time="100" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-api_2.12/ivy-1.4.0-RC4.xml" searched="true" original-local-location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-api_2.12/ivy-1.4.0-RC4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.12/1.4.0-RC4/twirl-api_2.12-1.4.0-RC4.pom"/>
+				<metadata-artifact status="no" details="" size="2951" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-api_2.12/ivy-1.4.0-RC4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.12/1.4.0-RC4/twirl-api_2.12-1.4.0-RC4.pom"/>
 				<caller organisation="com.typesafe.play" name="sbt-routes-compiler_2.12" conf="default, compile, runtime, master" rev="1.4.0-RC4" rev-constraint-default="1.4.0-RC4" rev-constraint-dynamic="1.4.0-RC4" callerrev="2.7.0-RC9"/>
 				<caller organisation="com.typesafe.play" name="twirl-compiler_2.12" conf="default, compile, runtime, master" rev="1.3.14" rev-constraint-default="1.3.14" rev-constraint-dynamic="1.3.14" callerrev="1.3.14"/>
 				<caller organisation="com.typesafe.play" name="sbt-routes-compiler_2.12" conf="default, compile, runtime, master" rev="1.3.14" rev-constraint-default="1.3.14" rev-constraint-dynamic="1.3.14" callerrev="2.6.12"/>
 				<caller organisation="com.typesafe.play" name="twirl-compiler_2.12" conf="default, compile, runtime, master" rev="1.4.0-RC4" rev-constraint-default="1.4.0-RC4" rev-constraint-dynamic="1.4.0-RC4" callerrev="1.4.0-RC4"/>
 				<artifacts>
-					<artifact name="twirl-api_2.12" type="jar" ext="jar" status="successful" details="" size="77388" time="195" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-api_2.12/jars/twirl-api_2.12-1.4.0-RC4.jar">
+					<artifact name="twirl-api_2.12" type="jar" ext="jar" status="no" details="" size="77388" time="0" location="/home/ktennyson/.ivy2/cache/com.typesafe.play/twirl-api_2.12/jars/twirl-api_2.12-1.4.0-RC4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.12/1.4.0-RC4/twirl-api_2.12-1.4.0-RC4.jar"/>
 					</artifact>
 				</artifacts>

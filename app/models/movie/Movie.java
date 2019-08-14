@@ -108,6 +108,18 @@ public class Movie extends Model {
         return backgroundColour;
     }
 
+    public void addRating(int rating){
+        globalRating.addRating(rating);
+    }
+
+    public MovieRating getGlobalRating(){
+        return globalRating;
+    }
+
+    public void changeRating(int oldRating, int newRating){
+        globalRating.changeRating(oldRating, newRating);
+    }
+
     public static Finder<Long, Movie> find = new Finder<Long, Movie>(Movie.class);
 
     public static List<Movie> findAll(){

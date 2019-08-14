@@ -42,15 +42,31 @@ public class HomeController extends Controller {
 
     public Result rateMovie(int rating, long movieid){
 
-        Movie movie = Movie.findMovie(id);
+        Movie movie = Movie.findMovie(movieid);
 
         User user = User.findUser("k10");
 
-        if(user.checkRating(movieid) == null){
-            PersonalRating prating = New PersonalRating();
+        PersonalRating oldRating = user.checkRating(movieid);
+
+        if(oldRating == null){ //hasnt rated it before
+            PersonalRating prating = new PersonalRating();
+            prating.setMovie(movie);
+            prating.setRating(rating);
+            user.addRating(prating);
+            movie.addRating(rating);
+            movie.update();
+            user.update();
+            
+        } else if (oldRating.getRating() != rating){
+            MovieRating globalRating = movie.getMovieRating();
+            globalRating.changeRating(oldRating.getRating(), rating);
+            globalRating.update();
+            oldRating.setRating(rating);
+            oldRating.update();
+            user.update();
         }
 
-        return ok(user.getUsername());
+        return redirect(routes.HomeController.moviePage(movieid));
     }
 
 

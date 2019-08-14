@@ -69,8 +69,13 @@ public class MovieRating extends Model {
         this.movie = movie;
     }
 
-    public void changeRating(int newRating, int oldRating){
+    public void changeRating(int oldRating, int newRating){
+        total =  total -oldRating + newRating;
+    }
 
+    public void addRating(int rating){
+        total+=rating;
+        numOfRatings++;
     }
 
     public static Finder<Long, MovieRating> find = new Finder<Long, MovieRating>(MovieRating.class);

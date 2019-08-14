@@ -45,7 +45,7 @@ public class User extends Model {
 
     public PersonalRating checkRating(Long movieId){
         for(PersonalRating rating:ratings){
-            if(rating.getMovie().getId() == id){
+            if(rating.getMovie().getId() == movieId){
                return rating;
             }
         }
